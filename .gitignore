@@ -1,0 +1,15 @@
+cmake-build-*/
+# File biên dịch
+*.o
+*.exe
+*.out
+.idea/
+
+# File log và tạm
+*.log
+
+# Các file build của CMake
+CMakeCache.txt
+CMakeFiles/
+cmake_install.cmake
+Makefile
