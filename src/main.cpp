@@ -1,6 +1,6 @@
 #include <SDL.h>
 #include <SDL_image.h>
-#include <stdio.h>
+#include <iostream>
 #include "game.h"
 
 using namespace std ;
@@ -18,7 +18,6 @@ void waitUntilKeyPressed() {
         }
     }
 }
-
 int main(int argc, char *argv[]) {
     Game game ;
     if (game.init(SCREEN_WIDTH,SCREEN_HEIGHT)) {
