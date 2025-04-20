@@ -56,8 +56,6 @@ void Window::runGame() {
     map=new Map() ;
     objectTexture= new TextureSrc() ;
     objectTexture->loadTileTexture(renderer) ;
-    map->reset() ;
-    map->reset() ;
     SDL_Event e;
     while(Running) {
         while (SDL_PollEvent(&e)!=0) {

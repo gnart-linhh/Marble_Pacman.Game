@@ -24,6 +24,6 @@
 -- Found mpg123: /opt/homebrew/lib/libmpg123.dylib
 -- Found OpusFile: /opt/homebrew/lib/libopusfile.dylib
 -- Found wavpack: /opt/homebrew/lib/libwavpack.dylib
--- Configuring done (1.4s)
+-- Configuring done (1.3s)
 -- Generating done (0.0s)
 -- Build files have been written to: /Users/nguyentranglinh/Crystals Maze Game /cmake-build-debug

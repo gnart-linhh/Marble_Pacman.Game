@@ -3,7 +3,6 @@
 //
 #include "Map.h"
 #include <queue>
-#include <SDL_rect.h>
 
 typedef std::pair<int,int> p ;
 
@@ -13,7 +12,7 @@ int color [31][28] ;
 
 Map::Map() {
     if (firstInit) {
-        std::ifstream file("map.txt");
+        std::ifstream file(mapFile);
         if (file) {
             for (int i=0;i<MAP_HEIGHT;++i) {
                 for (int j=0;j<MAP_WIDTH;++j) {
@@ -52,13 +51,7 @@ void Map::findingCrossRoad() {
 }
 
 int Map::getTileID(int x, int y) {
-    return tile[x][y] ;
-}
-void Map::NextCrossTileID() {
-
-}
-void Map::calculateDistance() {
-
+    return tile[y][x] ;
 }
 void Map::reset() {
     for (int i=0;i<MAP_HEIGHT;++i) {

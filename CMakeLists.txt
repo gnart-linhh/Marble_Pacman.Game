@@ -23,7 +23,7 @@ add_executable(CrystalsMazeGame src/main.cpp
         src/Map.cpp
         src/TextManager.cpp
         src/Button.cpp
-        src/WIndow.cpp
+        src/Window.cpp
         src/TextureSrc.cpp
 )
 

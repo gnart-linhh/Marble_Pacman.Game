@@ -30,11 +30,12 @@ class Map {
       bool besideCrossIsWall(std::pair<int,int> Cross, int newDir) ;
       int  collectCrystals(const int &pacmanTileX, const int &pacmanTileY) ;
       int getDist(std::pair<int,int> start, std::pair<int,int> end, int startDir) ;
+      int eatCoins(const int &pacmanTileX, const int &pacmanTileY) ;
       void reset() ;
     private:
       static const int MAP_WIDTH= 28 ;
       static const int MAP_HEIGHT= 31 ;
-      const std::string mapFile="map.txt" ;
+      const std::string mapFile="Assets/map.txt" ;
       LogStatus* Console= new LogStatus("Map") ;
       int tile[MAP_HEIGHT][MAP_WIDTH] ;
       int dist[MAP_WIDTH*MAP_HEIGHT][MAP_WIDTH*MAP_HEIGHT][4] ;

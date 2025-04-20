@@ -13,7 +13,7 @@ TextureSrc::~TextureSrc() {
 }
 
 void TextureSrc::loadTileTexture(SDL_Renderer *renderer) {
-    SDL_Surface *Image=IMG_Load("Assets/Images/Pacman Tile Labyrinth.png") ;
+    SDL_Surface *Image=IMG_Load("Assets/Images/MapTile.png") ;
     if (Image==nullptr) {
         Console->Status(IMG_GetError());
     }
