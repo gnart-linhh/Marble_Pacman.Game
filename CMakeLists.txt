@@ -25,6 +25,8 @@ add_executable(CrystalsMazeGame src/main.cpp
         src/Button.cpp
         src/Window.cpp
         src/TextureSrc.cpp
+        src/Object.cpp
+        src/Pacman.cpp
 )
 
 target_link_libraries(CrystalsMazeGame

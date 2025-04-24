@@ -1,0 +1,58 @@
+//
+// Created by Nguyễn Trang Linh on 24/4/25.
+//
+//
+// Created by Nguyễn Trang Linh on 21/4/25.
+//
+#include "Pacman.h"
+#include <iostream>
+#include <algorithm>
+
+typedef std::pair<int, std::pair<int, int> > IP;
+
+Pacman::Pacman(): Object(13, 23) {
+    while (!Direction.empty()) Direction.pop();
+}
+
+void Pacman::pushtoStack(int newDir) {
+    if (!Direction.empty()) Direction.pop();
+    Direction.push(newDir);
+}
+
+void Pacman::moving() {
+    if (!Direction.empty()) {
+        int velX = 0, velY = 0, dir = -1;
+        switch (Direction.top()) {
+            case UP:
+                velX = 0;
+            velY = -pacmanVelocity;
+            dir = 0;
+            break ;
+            case DOWN:
+                velX = 0;
+            velY = pacmanVelocity;
+            dir = 2;
+            break ;
+            case LEFT:
+                velX = -pacmanVelocity;
+            velY = 0;
+            dir = 3;
+            break ;
+            case RIGHT:
+                velX = pacmanVelocity;
+            velY = 0;
+            dir = 1;
+            break ;
+        }
+        changeVelocityDir(velX, velY, dir);
+        move();
+    }
+}
+
+void Pacman::stopmoving() {
+    if (!Direction.empty()) Direction.pop();
+}
+
+void Pacman::turn() {
+    if (!Direction.empty()) stopmoving();
+}

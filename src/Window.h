@@ -9,6 +9,7 @@
 #include <string>
 #include "LogStatus.h"
 #include "Map.h"
+#include "Pacman.h"
 #include "TextureSrc.h"
 class Window {
     public:
@@ -22,6 +23,7 @@ class Window {
         void runGame() ;
     private:
         Map* map ;
+        Pacman* pacman=nullptr ;
         SDL_Window *window=nullptr ;
         SDL_Renderer *renderer=nullptr ;
         LogStatus* Console=new LogStatus("Window") ;

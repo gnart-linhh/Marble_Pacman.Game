@@ -56,6 +56,8 @@ void Window::runGame() {
     map=new Map() ;
     objectTexture= new TextureSrc() ;
     objectTexture->loadTileTexture(renderer) ;
+    objectTexture->loadPacmanAndGhostTexture(renderer) ;
+    pacman=new Pacman() ;
     SDL_Event e;
     while(Running) {
         while (SDL_PollEvent(&e)!=0) {
@@ -70,6 +72,7 @@ void Window::runGame() {
                 objectTexture->renderTileTexture(renderer,map->getTileID(i,j),&dsRect);
             }
         }
+        objectTexture->renderPacmanTexture(renderer, pacman->getPosX(), pacman-> getPosY(),-1) ;
         SDL_RenderPresent(renderer);
     }
 }
