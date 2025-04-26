@@ -20,8 +20,13 @@ class TextureSrc{
         static const int FRIGHTEN_GHOST_2=5 ;
         static const int DEAD_PACMAN=5 ;
         static const int GHOST_SPIRIT=6 ;
+        static const int BLINKY=0 ;
+        static const int PINKY=1 ;
+        static const int INKY=2 ;
+        static const int CLYDE=3 ;
         TextureSrc();
         ~TextureSrc();
+        bool pacmanIsDead() ;
         void loadTileTexture(SDL_Renderer* renderer) ;
         void renderTileTexture(SDL_Renderer* renderer, int tileID, SDL_Rect* dstRect);
         void loadPacmanAndGhostTexture(SDL_Renderer* &renderer) ;

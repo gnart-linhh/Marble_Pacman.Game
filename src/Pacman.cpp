@@ -44,7 +44,7 @@ void Pacman::moving() {
             dir = 1;
             break ;
         }
-        changeVelocityDir(velX, velY, dir);
+        changeVelocityDir(velX, velY, dir) ;
         move();
     }
 }
@@ -55,4 +55,18 @@ void Pacman::stopmoving() {
 
 void Pacman::turn() {
     if (!Direction.empty()) stopmoving();
+}
+
+void Pacman::pushSpecialStack(int newDir, std::pair<int, int> nextCross) {
+    if (!Special.empty()) {
+        if (Special.top().first!=newDir) {
+            Special.pop();
+            Special.push(IP(newDir, nextCross));
+        }
+    }
+    else Special.push(IP(newDir, nextCross));
+}
+
+void Pacman::eraseSpecial() {
+    while (!Special.empty()) Special.pop();
 }

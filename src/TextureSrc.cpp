@@ -151,4 +151,12 @@ void TextureSrc::renderGhostTexture(SDL_Renderer *&renderer, int posX, int posY,
     SDL_RenderCopy(renderer,entityTexture,&srcRect,&dsRect);
 }
 
+bool TextureSrc::pacmanIsDead() {
+    if (pacmanFrame==109) {
+        pacmanFrame=0 ;
+        return true ;
+    }
+    return false ;
+}
+
 

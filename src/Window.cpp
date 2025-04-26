@@ -52,12 +52,30 @@ void Window::quitSDL() {
     SDL_Quit() ;
 }
 
+void Window::renderGhost(SDL_Renderer* renderer,Ghost* &ghost, int ghostID) {
+    if (ghost==nullptr) return ;
+    if (ghost->isDead())
+        objectTexture->renderGhostTexture(renderer, ghost->getPosX(), ghost->getPosY(), TextureSrc::GHOST_SPIRIT, ghost->getGhostDir()) ;
+    else if (ghost->isFrighten()) {
+        if (tickManager->remainFrightenTime()<2.0)
+            objectTexture->renderGhostTexture(renderer, ghost->getPosX(), ghost->getPosY(), ghostID, TextureSrc::FRIGHTEN_GHOST_2) ;
+        else
+            objectTexture->renderGhostTexture(renderer, ghost->getPosX(), ghost->getPosY(), ghostID, TextureSrc::FRIGHTEN_GHOST_1 ) ;
+    }
+    else
+        objectTexture->renderGhostTexture(renderer, ghost->getPosX(), ghost->getPosY(), ghostID, ghost->getGhostDir()) ;
+}
+
 void Window::runGame() {
     map=new Map() ;
     objectTexture= new TextureSrc() ;
     objectTexture->loadTileTexture(renderer) ;
     objectTexture->loadPacmanAndGhostTexture(renderer) ;
     pacman=new Pacman() ;
+    blinky=new Ghost(12,11,false) ;
+    pinky=new Ghost(13,14,true) ;
+    inky=new Ghost(11,14,true) ;
+    clyde=new Ghost(15,14,true) ;
     SDL_Event e;
     while(Running) {
         while (SDL_PollEvent(&e)!=0) {
@@ -73,6 +91,7 @@ void Window::runGame() {
             }
         }
         objectTexture->renderPacmanTexture(renderer, pacman->getPosX(), pacman-> getPosY(),-1) ;
+        objectTexture->renderGhostTexture(renderer,pinky->getPosX(),pinky->getPosY(),0,pinky->getGhostDir()) ;
         SDL_RenderPresent(renderer);
     }
 }

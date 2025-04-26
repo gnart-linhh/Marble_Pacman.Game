@@ -179,3 +179,15 @@ void Map::reset() {
     }
 }
 
+bool Map::canChangeDir(int x, int y, int newDir) {
+    return markCross[y][x][newDir] ;
+}
+
+bool Map::besideCrossIsWall(std::pair<int, int> Cross, int newDir) {
+    if (newDir==UP) Cross.second-=1 ;
+    if (newDir==DOWN) Cross.second+=1 ;
+    if (newDir==LEFT) Cross.first-=1 ;
+    if (newDir==RIGHT) Cross.first+=1 ;
+    return isWall(Cross) ;
+}
+

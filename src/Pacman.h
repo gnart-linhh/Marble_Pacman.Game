@@ -31,8 +31,17 @@ class Pacman : public Object {
             resetObjectTile(PACMAN_START_TILE_X, PACMAN_START_TILE_Y) ;
             while (!Direction.empty()) Direction.pop() ;
         }// hồi sinh
+        bool emtySpecial() {
+            return Special.empty() ;
+        }
+        void pushSpecialStack(int newDir, std::pair<int,int> nextCross) ;
+        std::pair<int, int> getSpecial() {
+            return Special.top().second ;
+        }
+        void eraseSpecial()  ;
     private:
         std::stack<int> Direction ;
+        std::stack<std::pair<int, std::pair<int,int>>> Special ;
 } ;
 
 #endif //PACMAN_H
