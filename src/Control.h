@@ -20,6 +20,7 @@ class Control {
       double CHASING_TIME=20.0 ;
       std::stack<CID> mode ;
       int lastStatus ;
+      bool pause ;
     public:
       const int FPS=60 ;
       const int FRIGHTEN_MODE=0 ;
@@ -32,6 +33,9 @@ class Control {
       void setFrightenTime() ;
       void stablizeFPS() ;
       void updateStatus() ;
+      bool isScatteringTime() const ;
+      void resetTick(const int level) ;
+      bool pauseTick(const bool status) ;
 
 } ;
 

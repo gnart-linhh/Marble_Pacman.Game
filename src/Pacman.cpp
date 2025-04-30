@@ -70,3 +70,5 @@ void Pacman::pushSpecialStack(int newDir, std::pair<int, int> nextCross) {
 void Pacman::eraseSpecial() {
     while (!Special.empty()) Special.pop();
 }
+
+

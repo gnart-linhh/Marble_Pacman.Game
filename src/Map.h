@@ -28,7 +28,6 @@ class Map {
       bool iscrossRoad(int y, int x) ;
       bool canChangeDir(int x,int y, int newDir)  ;
       bool besideCrossIsWall(std::pair<int,int> Cross, int newDir) ;
-      int  collectCrystals(const int &pacmanTileX, const int &pacmanTileY) ;
       int getDist(std::pair<int,int> start, std::pair<int,int> end, int startDir) ;
       int eatCoins(const int &pacmanTileX, const int &pacmanTileY) ;
       void reset() ;

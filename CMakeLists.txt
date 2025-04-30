@@ -19,7 +19,7 @@ include_directories(/opt/homebrew/opt/sdl2_image/include/SDL2)
 include_directories(${SDL2_TTF_DIR}/include/SDL2)
 
 add_executable(CrystalsMazeGame src/main.cpp
-        src/game.cpp
+        src/Game.cpp
         src/Map.cpp
         src/TextManager.cpp
         src/Button.cpp

@@ -12,6 +12,7 @@
 #include "Ghost.h"
 #include "TextureSrc.h"
 #include "Control.h"
+#include "Game.h"
 
 class Base{
   public:
@@ -35,11 +36,14 @@ class Base{
     }
     void init(SDL_Renderer* renderer);
     void newGame() ;
-    void handleEvent(SDL_Event &e, std::vector<std::string> &scoreData);
+    void handleEvent(SDL_Event &e);
     void loop(bool &exitToMenu) ;
     void render(SDL_Renderer* renderer, const std::vector<std::string> &scoreData);
+    void ghostMove(Ghost* &ghost);
+    void pacmanMeatGhost(Ghost* &ghost)  ;
   private:
     Map* map ;
+    Game* game ;
     Pacman* pacman=nullptr;
     Ghost* blinky=nullptr ;
     Ghost* pinky=nullptr ;
@@ -48,7 +52,7 @@ class Base{
     TextureSrc* objectTexture ;
     Control* control ;
     bool runningEGBoard=false ;
-
+    int waitTime=0 ;
   protected:
     void renderGhost(SDL_Renderer* renderer, Ghost* &ghost, int ghostID) ;
     void respawnObject() ;

@@ -131,7 +131,7 @@ void Map::calculateDistance() { // BFS algorithm
     for (int x=0;x<MAP_WIDTH;++x) {
         for (int y=0;y<MAP_HEIGHT;++y) {
             if (isWall(std::pair<int,int> (x,y))) continue;
-            if (y==14&&(x==0||x==27)) continue ;
+            if (y==14&&(x==0||x==27)) continue ; //Tunnel
             for (int startDir=0;startDir<4;++startDir) {
                 int xTemp=x+moveX[startDir] ;
                 int yTemp=y+moveY[startDir] ;
@@ -146,7 +146,7 @@ void Map::calculateDistance() { // BFS algorithm
                     int cury=visitedNode.front().second % MAP_HEIGHT ;
                     int lasDir=visitedNode.front().second ;
                     visitedNode.pop() ;
-                    if (cury==14&&(curx==0||curx==27)) continue ;
+                    if (cury==14&&(curx==0||curx==27)) continue ; //tunnel
                     for (int dir=0;dir<4;++dir) {
                         int u=curx+moveX[dir] ;
                         int v=cury+moveY[dir] ;
@@ -190,4 +190,32 @@ bool Map::besideCrossIsWall(std::pair<int, int> Cross, int newDir) {
     if (newDir==RIGHT) Cross.first+=1 ;
     return isWall(Cross) ;
 }
+
+int Map::eatCoins(const int &pacmanTileX, const int &pacmanTileY) {
+    if (tile[pacmanTileY][pacmanTileX]==26) {
+        tile[pacmanTileY][pacmanTileX] = 30 ;
+        return 26 ;
+    }
+    if (tile[pacmanTileY][pacmanTileX]==27) {
+        tile[pacmanTileY][pacmanTileX] = 30 ;
+        return 27 ;
+    }
+    return 0 ;
+}
+
+int Map::getDist(std::pair<int, int> start, std::pair<int, int> end, int startDir) {
+    if (isWall(end)) return (start.first-end.first)*(start.first-end.first)+(start.second-end.second)*(start.second-end.second) ;
+    else {
+        if (dist[start.first*MAP_HEIGHT+start.second][end.first*MAP_HEIGHT+end.second][startDir]==-1)
+            return (start.first-end.first)*(start.first-end.first)+(start.second-end.second)*(start.second-end.second) ;
+        else return dist[start.first*MAP_HEIGHT+start.second][end.first*MAP_HEIGHT+end.second][startDir] ;
+    }
+}
+
+std::pair<int, int> Map::getnextCrossID(int x, int y, int dir) {
+    return nextCrossID[y][x][dir] ;
+}
+
+
+
 
