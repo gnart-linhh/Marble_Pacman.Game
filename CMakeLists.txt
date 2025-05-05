@@ -30,6 +30,7 @@ add_executable(CrystalsMazeGame src/main.cpp
         src/Ghost.cpp
         src/Base.cpp
         src/Control.cpp
+        src/Menu.cpp
 )
 
 target_link_libraries(CrystalsMazeGame

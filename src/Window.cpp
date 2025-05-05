@@ -52,9 +52,9 @@ void Window::quitSDL() {
 }
 
 void Window::runGame() {
-    base= new Base() ;
     SDL_Event e;
     bool startGame=false ;
+    base= new Base() ;
     while(Running) {
         while (SDL_PollEvent(&e)!=0) {
             if(e.type==SDL_QUIT) Running=false ;
@@ -62,10 +62,9 @@ void Window::runGame() {
                 base->handleEvent(e) ;
             }
         }
-        static bool inited=false ;
-        if (!inited) {
+        if (!startGame) {
             base->init(renderer) ;
-            inited=true ;
+            startGame=true ;
         }
         else base->newGame() ;
         SDL_Rect dsRect ;

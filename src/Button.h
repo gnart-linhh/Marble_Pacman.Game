@@ -17,19 +17,16 @@ class Button {
         const SDL_Color normalColor={0,0,0,255} ;
         const SDL_Color selectColor={254,233,0,255} ;
         Button(int Width, int Height, int scrPosX, int scrPosY);
-        void loadButton(SDL_Renderer* &renderer, std::string text="") ;
+        void loadButton(SDL_Renderer* &renderer,const std::string& text) ;
         void renderButton(SDL_Renderer* &renderer) ;
         void getStatus(const int status) ;
-        void changeSoundButton(SDL_Renderer* &renderer) ;
         bool checkMousePos(const int&x, const int&y) const;
         std::string getText() const;
     private:
         SDL_Rect buttonRect ;
         TextManager *normalText ;
         TextManager *selectText ;
-        TextManager *selectTextDetail ;
         int buttonStatus ;
         std::string bText ;
-        std::string bTextDetail ;
 } ;
 #endif //BUTTON_H
