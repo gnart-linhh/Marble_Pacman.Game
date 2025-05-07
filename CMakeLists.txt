@@ -19,7 +19,7 @@ include_directories(/opt/homebrew/opt/sdl2_image/include/SDL2)
 include_directories(${SDL2_TTF_DIR}/include/SDL2)
 
 add_executable(CrystalsMazeGame src/main.cpp
-        src/Game.cpp
+        src/GameManager.cpp
         src/Map.cpp
         src/TextManager.cpp
         src/Button.cpp
@@ -28,9 +28,12 @@ add_executable(CrystalsMazeGame src/main.cpp
         src/Object.cpp
         src/Pacman.cpp
         src/Ghost.cpp
-        src/Base.cpp
-        src/Control.cpp
+        src/Engine.cpp
+        src/TickManager.cpp
         src/Menu.cpp
+        src/SoundManager.cpp
+        src/PlayStateManager.cpp
+        src/Item.cpp
 )
 
 target_link_libraries(CrystalsMazeGame
@@ -39,4 +42,3 @@ target_link_libraries(CrystalsMazeGame
         /opt/homebrew/lib/libSDL2_ttf.dylib
         /opt/homebrew/lib/libSDL2_mixer.dylib
 )
-

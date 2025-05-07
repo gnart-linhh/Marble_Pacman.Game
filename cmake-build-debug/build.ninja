@@ -58,8 +58,8 @@ build CMakeFiles/CrystalsMazeGame.dir/src/main.cpp.o: CXX_COMPILER__CrystalsMaze
   TARGET_COMPILE_PDB = CMakeFiles/CrystalsMazeGame.dir/
   TARGET_PDB = CrystalsMazeGame.pdb
 
-build CMakeFiles/CrystalsMazeGame.dir/src/Game.cpp.o: CXX_COMPILER__CrystalsMazeGame_unscanned_Debug /Users/nguyentranglinh/Crystals$ Maze$ Game$ /src/Game.cpp || cmake_object_order_depends_target_CrystalsMazeGame
-  DEP_FILE = CMakeFiles/CrystalsMazeGame.dir/src/Game.cpp.o.d
+build CMakeFiles/CrystalsMazeGame.dir/src/GameManager.cpp.o: CXX_COMPILER__CrystalsMazeGame_unscanned_Debug /Users/nguyentranglinh/Crystals$ Maze$ Game$ /src/GameManager.cpp || cmake_object_order_depends_target_CrystalsMazeGame
+  DEP_FILE = CMakeFiles/CrystalsMazeGame.dir/src/GameManager.cpp.o.d
   FLAGS = -g -std=gnu++20 -arch arm64 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX15.4.sdk -fcolor-diagnostics
   INCLUDES = -I/opt/homebrew/opt/sdl2_mixer/include/SDL2 -I/opt/homebrew/opt/sdl2/include/SDL2 -I/opt/homebrew/opt/sdl2_image/include/SDL2 -I/opt/homebrew/opt/sdl2_ttf/include/SDL2 -isystem /opt/homebrew/Cellar/sdl2/2.32.4/include/SDL2
   OBJECT_DIR = CMakeFiles/CrystalsMazeGame.dir
@@ -139,8 +139,8 @@ build CMakeFiles/CrystalsMazeGame.dir/src/Ghost.cpp.o: CXX_COMPILER__CrystalsMaz
   TARGET_COMPILE_PDB = CMakeFiles/CrystalsMazeGame.dir/
   TARGET_PDB = CrystalsMazeGame.pdb
 
-build CMakeFiles/CrystalsMazeGame.dir/src/Base.cpp.o: CXX_COMPILER__CrystalsMazeGame_unscanned_Debug /Users/nguyentranglinh/Crystals$ Maze$ Game$ /src/Base.cpp || cmake_object_order_depends_target_CrystalsMazeGame
-  DEP_FILE = CMakeFiles/CrystalsMazeGame.dir/src/Base.cpp.o.d
+build CMakeFiles/CrystalsMazeGame.dir/src/Engine.cpp.o: CXX_COMPILER__CrystalsMazeGame_unscanned_Debug /Users/nguyentranglinh/Crystals$ Maze$ Game$ /src/Engine.cpp || cmake_object_order_depends_target_CrystalsMazeGame
+  DEP_FILE = CMakeFiles/CrystalsMazeGame.dir/src/Engine.cpp.o.d
   FLAGS = -g -std=gnu++20 -arch arm64 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX15.4.sdk -fcolor-diagnostics
   INCLUDES = -I/opt/homebrew/opt/sdl2_mixer/include/SDL2 -I/opt/homebrew/opt/sdl2/include/SDL2 -I/opt/homebrew/opt/sdl2_image/include/SDL2 -I/opt/homebrew/opt/sdl2_ttf/include/SDL2 -isystem /opt/homebrew/Cellar/sdl2/2.32.4/include/SDL2
   OBJECT_DIR = CMakeFiles/CrystalsMazeGame.dir
@@ -148,8 +148,8 @@ build CMakeFiles/CrystalsMazeGame.dir/src/Base.cpp.o: CXX_COMPILER__CrystalsMaze
   TARGET_COMPILE_PDB = CMakeFiles/CrystalsMazeGame.dir/
   TARGET_PDB = CrystalsMazeGame.pdb
 
-build CMakeFiles/CrystalsMazeGame.dir/src/Control.cpp.o: CXX_COMPILER__CrystalsMazeGame_unscanned_Debug /Users/nguyentranglinh/Crystals$ Maze$ Game$ /src/Control.cpp || cmake_object_order_depends_target_CrystalsMazeGame
-  DEP_FILE = CMakeFiles/CrystalsMazeGame.dir/src/Control.cpp.o.d
+build CMakeFiles/CrystalsMazeGame.dir/src/TickManager.cpp.o: CXX_COMPILER__CrystalsMazeGame_unscanned_Debug /Users/nguyentranglinh/Crystals$ Maze$ Game$ /src/TickManager.cpp || cmake_object_order_depends_target_CrystalsMazeGame
+  DEP_FILE = CMakeFiles/CrystalsMazeGame.dir/src/TickManager.cpp.o.d
   FLAGS = -g -std=gnu++20 -arch arm64 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX15.4.sdk -fcolor-diagnostics
   INCLUDES = -I/opt/homebrew/opt/sdl2_mixer/include/SDL2 -I/opt/homebrew/opt/sdl2/include/SDL2 -I/opt/homebrew/opt/sdl2_image/include/SDL2 -I/opt/homebrew/opt/sdl2_ttf/include/SDL2 -isystem /opt/homebrew/Cellar/sdl2/2.32.4/include/SDL2
   OBJECT_DIR = CMakeFiles/CrystalsMazeGame.dir
@@ -166,6 +166,33 @@ build CMakeFiles/CrystalsMazeGame.dir/src/Menu.cpp.o: CXX_COMPILER__CrystalsMaze
   TARGET_COMPILE_PDB = CMakeFiles/CrystalsMazeGame.dir/
   TARGET_PDB = CrystalsMazeGame.pdb
 
+build CMakeFiles/CrystalsMazeGame.dir/src/SoundManager.cpp.o: CXX_COMPILER__CrystalsMazeGame_unscanned_Debug /Users/nguyentranglinh/Crystals$ Maze$ Game$ /src/SoundManager.cpp || cmake_object_order_depends_target_CrystalsMazeGame
+  DEP_FILE = CMakeFiles/CrystalsMazeGame.dir/src/SoundManager.cpp.o.d
+  FLAGS = -g -std=gnu++20 -arch arm64 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX15.4.sdk -fcolor-diagnostics
+  INCLUDES = -I/opt/homebrew/opt/sdl2_mixer/include/SDL2 -I/opt/homebrew/opt/sdl2/include/SDL2 -I/opt/homebrew/opt/sdl2_image/include/SDL2 -I/opt/homebrew/opt/sdl2_ttf/include/SDL2 -isystem /opt/homebrew/Cellar/sdl2/2.32.4/include/SDL2
+  OBJECT_DIR = CMakeFiles/CrystalsMazeGame.dir
+  OBJECT_FILE_DIR = CMakeFiles/CrystalsMazeGame.dir/src
+  TARGET_COMPILE_PDB = CMakeFiles/CrystalsMazeGame.dir/
+  TARGET_PDB = CrystalsMazeGame.pdb
+
+build CMakeFiles/CrystalsMazeGame.dir/src/PlayStateManager.cpp.o: CXX_COMPILER__CrystalsMazeGame_unscanned_Debug /Users/nguyentranglinh/Crystals$ Maze$ Game$ /src/PlayStateManager.cpp || cmake_object_order_depends_target_CrystalsMazeGame
+  DEP_FILE = CMakeFiles/CrystalsMazeGame.dir/src/PlayStateManager.cpp.o.d
+  FLAGS = -g -std=gnu++20 -arch arm64 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX15.4.sdk -fcolor-diagnostics
+  INCLUDES = -I/opt/homebrew/opt/sdl2_mixer/include/SDL2 -I/opt/homebrew/opt/sdl2/include/SDL2 -I/opt/homebrew/opt/sdl2_image/include/SDL2 -I/opt/homebrew/opt/sdl2_ttf/include/SDL2 -isystem /opt/homebrew/Cellar/sdl2/2.32.4/include/SDL2
+  OBJECT_DIR = CMakeFiles/CrystalsMazeGame.dir
+  OBJECT_FILE_DIR = CMakeFiles/CrystalsMazeGame.dir/src
+  TARGET_COMPILE_PDB = CMakeFiles/CrystalsMazeGame.dir/
+  TARGET_PDB = CrystalsMazeGame.pdb
+
+build CMakeFiles/CrystalsMazeGame.dir/src/Item.cpp.o: CXX_COMPILER__CrystalsMazeGame_unscanned_Debug /Users/nguyentranglinh/Crystals$ Maze$ Game$ /src/Item.cpp || cmake_object_order_depends_target_CrystalsMazeGame
+  DEP_FILE = CMakeFiles/CrystalsMazeGame.dir/src/Item.cpp.o.d
+  FLAGS = -g -std=gnu++20 -arch arm64 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX15.4.sdk -fcolor-diagnostics
+  INCLUDES = -I/opt/homebrew/opt/sdl2_mixer/include/SDL2 -I/opt/homebrew/opt/sdl2/include/SDL2 -I/opt/homebrew/opt/sdl2_image/include/SDL2 -I/opt/homebrew/opt/sdl2_ttf/include/SDL2 -isystem /opt/homebrew/Cellar/sdl2/2.32.4/include/SDL2
+  OBJECT_DIR = CMakeFiles/CrystalsMazeGame.dir
+  OBJECT_FILE_DIR = CMakeFiles/CrystalsMazeGame.dir/src
+  TARGET_COMPILE_PDB = CMakeFiles/CrystalsMazeGame.dir/
+  TARGET_PDB = CrystalsMazeGame.pdb
+
 
 # =============================================================================
 # Link build statements for EXECUTABLE target CrystalsMazeGame
@@ -174,7 +201,7 @@ build CMakeFiles/CrystalsMazeGame.dir/src/Menu.cpp.o: CXX_COMPILER__CrystalsMaze
 #############################################
 # Link the executable CrystalsMazeGame
 
-build CrystalsMazeGame: CXX_EXECUTABLE_LINKER__CrystalsMazeGame_Debug CMakeFiles/CrystalsMazeGame.dir/src/main.cpp.o CMakeFiles/CrystalsMazeGame.dir/src/Game.cpp.o CMakeFiles/CrystalsMazeGame.dir/src/Map.cpp.o CMakeFiles/CrystalsMazeGame.dir/src/TextManager.cpp.o CMakeFiles/CrystalsMazeGame.dir/src/Button.cpp.o CMakeFiles/CrystalsMazeGame.dir/src/Window.cpp.o CMakeFiles/CrystalsMazeGame.dir/src/TextureSrc.cpp.o CMakeFiles/CrystalsMazeGame.dir/src/Object.cpp.o CMakeFiles/CrystalsMazeGame.dir/src/Pacman.cpp.o CMakeFiles/CrystalsMazeGame.dir/src/Ghost.cpp.o CMakeFiles/CrystalsMazeGame.dir/src/Base.cpp.o CMakeFiles/CrystalsMazeGame.dir/src/Control.cpp.o CMakeFiles/CrystalsMazeGame.dir/src/Menu.cpp.o | /opt/homebrew/Cellar/sdl2/2.32.4/lib/libSDL2.dylib /opt/homebrew/lib/libSDL2_image.dylib /opt/homebrew/lib/libSDL2_ttf.dylib /opt/homebrew/lib/libSDL2_mixer.dylib
+build CrystalsMazeGame: CXX_EXECUTABLE_LINKER__CrystalsMazeGame_Debug CMakeFiles/CrystalsMazeGame.dir/src/main.cpp.o CMakeFiles/CrystalsMazeGame.dir/src/GameManager.cpp.o CMakeFiles/CrystalsMazeGame.dir/src/Map.cpp.o CMakeFiles/CrystalsMazeGame.dir/src/TextManager.cpp.o CMakeFiles/CrystalsMazeGame.dir/src/Button.cpp.o CMakeFiles/CrystalsMazeGame.dir/src/Window.cpp.o CMakeFiles/CrystalsMazeGame.dir/src/TextureSrc.cpp.o CMakeFiles/CrystalsMazeGame.dir/src/Object.cpp.o CMakeFiles/CrystalsMazeGame.dir/src/Pacman.cpp.o CMakeFiles/CrystalsMazeGame.dir/src/Ghost.cpp.o CMakeFiles/CrystalsMazeGame.dir/src/Engine.cpp.o CMakeFiles/CrystalsMazeGame.dir/src/TickManager.cpp.o CMakeFiles/CrystalsMazeGame.dir/src/Menu.cpp.o CMakeFiles/CrystalsMazeGame.dir/src/SoundManager.cpp.o CMakeFiles/CrystalsMazeGame.dir/src/PlayStateManager.cpp.o CMakeFiles/CrystalsMazeGame.dir/src/Item.cpp.o | /opt/homebrew/Cellar/sdl2/2.32.4/lib/libSDL2.dylib /opt/homebrew/lib/libSDL2_image.dylib /opt/homebrew/lib/libSDL2_ttf.dylib /opt/homebrew/lib/libSDL2_mixer.dylib
   FLAGS = -g -arch arm64 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX15.4.sdk
   LINK_FLAGS = -L/opt/homebrew/opt/llvm/lib
   LINK_LIBRARIES = -Wl,-rpath,/opt/homebrew/Cellar/sdl2/2.32.4/lib  /opt/homebrew/Cellar/sdl2/2.32.4/lib/libSDL2.dylib  /opt/homebrew/lib/libSDL2_image.dylib  /opt/homebrew/lib/libSDL2_ttf.dylib  /opt/homebrew/lib/libSDL2_mixer.dylib
