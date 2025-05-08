@@ -125,12 +125,13 @@ void Engine::handleEvent(SDL_Event &e, std::vector<std::string> &scoreData) {
                 else {
                     std::pair<int, int> nextCross = map->getnextCrossID(pacmanTileX, pacmanTileY, lastDir);
 
-                    if (lastDir % 2 == 1 && newDir % 2 == 0) {
+                    if (lastDir % 2 == 1 && newDir % 2 == 0) { // khác phương
                         if (pacmanPosY == pacmanTileY * 16) {
                             if (map->canChangeDir(pacmanTileX, pacmanTileY, newDir)) {
                                 pacman->pushSpecialStack(newDir, II(pacmanTileX, pacmanTileY));
                             }
                             else if (nextCross != II(-1, -1) && !map->besideCrossIsWall(nextCross, newDir) && abs(pacmanPosX - nextCross.first * 16) <= 32) {
+                                // có ngã rẽ, k phải tường kcach k quá 2
                                 pacman->pushSpecialStack( newDir, nextCross );
                             }
                         }
