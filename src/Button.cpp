@@ -30,7 +30,7 @@ void Button::loadButton(SDL_Renderer* &renderer, std::string text) {
 
 void Button::renderButton(SDL_Renderer* &renderer) {
     if (buttonStatus == BUTTON_IN) {
-        SDL_SetRenderDrawColor(renderer, 251, 69, 152, 255);
+        SDL_SetRenderDrawColor(renderer, 251, 69, 152, 255);// hồng đậm
         SDL_RenderFillRect(renderer, &buttonRect);
 
         SDL_SetRenderDrawColor(renderer, selectColor.r, selectColor.g, selectColor.b, selectColor.a);

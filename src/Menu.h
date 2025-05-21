@@ -26,8 +26,8 @@ class Menu {
         int baseScrPosY;
 
         TextManager* scoreText = nullptr;
-        Mix_Chunk* navigationSound = Mix_LoadWAV("Assets/Sound/button.wav");
-        Mix_Chunk* selectionSound = Mix_LoadWAV("Assets/Sound/button.wav");
+        Mix_Chunk* navigationSound = Mix_LoadWAV("Assets/Sounds/button.wav");
+        Mix_Chunk* selectionSound = Mix_LoadWAV("Assets/Sounds/button.wav");
         SDL_Texture* menuTexture;
         SDL_Texture* howToPlayTexture[3];
         SDL_Texture* highScoreTexture;

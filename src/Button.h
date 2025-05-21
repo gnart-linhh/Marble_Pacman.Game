@@ -21,8 +21,8 @@ public:
     static const int BUTTON_IN  = 1;
     static const int BUTTON_PRESSED = 2;
     static const int MENU_FONT_SIZE = 28;
-    const SDL_Color normalColor = {0, 0, 0, 255};
-    const SDL_Color selectColor = {254, 233, 0, 255};
+    const SDL_Color normalColor = {0, 0, 0, 255}; // đen
+    const SDL_Color selectColor = {254, 233, 0, 255}; // vàng chanh
 
     Button(int Width, int Height, int scrPosX, int scrPosY);
 

@@ -147,7 +147,7 @@ void Map::calculateDistance() {
                         dist[x * MAP_HEIGHT + y][u * MAP_HEIGHT + v][dir] = -1;
     //std::cout << 1;
     int id = 0;
-    int dh[4] = { 0, 1, 0, -1};
+    int dh[4] = { 0, 1, 0, -1}; // up right down left
     int dc[4] = {-1, 0, 1,  0};
     int dis[MAP_WIDTH * MAP_HEIGHT];
     std::queue< std::pair<int, int> > visitNode;
@@ -163,6 +163,7 @@ void Map::calculateDistance() {
                 ++id;
                 color[yn][xn] = id;
                 dis[xn * MAP_HEIGHT + yn] = 0;
+                // BFS
                 visitNode.push(std::pair<int, int> (yn * MAP_WIDTH + xn, startDir));
                 while (!visitNode.empty()) {
                     int curx = visitNode.front().first % MAP_WIDTH,
@@ -172,7 +173,7 @@ void Map::calculateDistance() {
                     if (cury == 14 && (curx == 0 || curx == 27)) continue;
                     for (int dir = 0; dir < 4; ++dir) {
                         int u = curx + dh[dir], v = cury + dc[dir];
-                        if (lasDir % 2 == dir % 2 && dir != lasDir) continue;
+                        if (lasDir % 2 == dir % 2 && dir != lasDir) continue; // cùng phương ngược hướng
                         if (isWall(std::pair<int, int> (u, v))) continue;
                         if (color[v][u] != id) {
                             color[v][u] = id;
@@ -202,6 +203,7 @@ int Map::eatCoins(const int &pacmanTileX, const int &pacmanTileY) {
 }
 
 int Map::getDist(std::pair<int, int> start, std::pair<int, int> end, int startDir) {
+    // khong co duong hop le -> dung eculid
     if (isWall(end)) return (start.first - end.first) * (start.first - end.first) + (start.second - end.second) * (start.second - end.second);
     else {
         if (dist[start.first * MAP_HEIGHT + start.second][end.first * MAP_HEIGHT + end.second][startDir] == -1)

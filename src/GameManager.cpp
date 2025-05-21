@@ -208,6 +208,7 @@ void GameManager::runEGBoard(SDL_Renderer* &renderer) {
     noBut ->renderButton(renderer);
     if (newRecord) {
         SDL_RenderCopy(renderer, hsBoard, nullptr, &dsRect);
+        // tạo con trỏ nhấp nháy như nhập văn bản
         static int caretTime = 0;
         SDL_Rect caret = {395 + playerName->getTextWidth(), 265, 2, 20};
         if (caretTime % 20 > 10) {

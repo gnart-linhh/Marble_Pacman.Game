@@ -87,7 +87,7 @@ void Engine::respawnObject() {
 }
 
 void Engine::handleEvent(SDL_Event &e, std::vector<std::string> &scoreData) {
-    if (Mix_Playing(2) || Mix_Playing(4)) return;
+    if (Mix_Playing(2) || Mix_Playing(4)) return; // die/ win/ lose
     if (pacman->isDead()) {
         if (runningEGBoard) gameManager->handleEGBoard(e, scoreData);
         return;
@@ -125,7 +125,7 @@ void Engine::handleEvent(SDL_Event &e, std::vector<std::string> &scoreData) {
                 else {
                     std::pair<int, int> nextCross = map->getnextCrossID(pacmanTileX, pacmanTileY, lastDir);
 
-                    if (lastDir % 2 == 1 && newDir % 2 == 0) { // khác phương
+                    if (lastDir % 2 == 1 && newDir % 2 == 0) { // cũ ngang mới dọc
                         if (pacmanPosY == pacmanTileY * 16) {
                             if (map->canChangeDir(pacmanTileX, pacmanTileY, newDir)) {
                                 pacman->pushSpecialStack(newDir, II(pacmanTileX, pacmanTileY));
@@ -136,7 +136,7 @@ void Engine::handleEvent(SDL_Event &e, std::vector<std::string> &scoreData) {
                             }
                         }
                     }
-                    else if (lastDir % 2 == 0 && newDir % 2 == 1) {
+                    else if (lastDir % 2 == 0 && newDir % 2 == 1) { // cũ dọc mới ngang
                         if (pacmanPosX == pacmanTileX * 16) {
                             if (map->canChangeDir(pacmanTileX, pacmanTileY, newDir)) {
                                 pacman->pushSpecialStack(newDir, II(pacmanTileX, pacmanTileY));
